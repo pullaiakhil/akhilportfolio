@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 
@@ -716,8 +716,16 @@ function CertificationsSection() {
     margin: "0 auto clamp(60px,8vw,100px)",
   }}
 >
-  {CERTS.map((cert, i) => (
-    <FadeIn key={cert} delay={i * 0.07} y={20}>
+{CERTS.map((cert, i) => (
+  <FadeIn key={cert.name} delay={i * 0.07} y={20}>
+    <a
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        textDecoration: "none",
+      }}
+    >
       <div
         style={{
           border: "1.5px solid rgba(215,226,234,0.3)",
@@ -729,12 +737,14 @@ function CertificationsSection() {
           letterSpacing: "0.06em",
           textTransform: "uppercase",
           background: "rgba(215,226,234,0.04)",
+          cursor: "pointer",
         }}
       >
-        {cert}
+        {cert.name}
       </div>
-    </FadeIn>
-  ))}
+    </a>
+  </FadeIn>
+))}
 </div>
       {/* Social Icons */}
       <div
