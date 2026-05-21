@@ -706,7 +706,36 @@ function CertificationsSection() {
           Certifications
         </h2>
       </FadeIn>
-
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "clamp(10px,1.5vw,20px)",
+    maxWidth: 900,
+    margin: "0 auto clamp(60px,8vw,100px)",
+  }}
+>
+  {CERTS.map((cert, i) => (
+    <FadeIn key={cert} delay={i * 0.07} y={20}>
+      <div
+        style={{
+          border: "1.5px solid rgba(215,226,234,0.3)",
+          borderRadius: 9999,
+          padding: "clamp(8px,1vw,12px) clamp(20px,2.5vw,36px)",
+          color: "#D7E2EA",
+          fontSize: "clamp(0.75rem,1.3vw,1.1rem)",
+          fontWeight: 400,
+          letterSpacing: "0.06em",
+          textTransform: "uppercase",
+          background: "rgba(215,226,234,0.04)",
+        }}
+      >
+        {cert}
+      </div>
+    </FadeIn>
+  ))}
+</div>
       {/* Social Icons */}
       <div
         style={{
