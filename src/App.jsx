@@ -523,7 +523,7 @@ function ProjectCard({ project, index, totalCards, scrollProgress }) {
 const PROJECTS = [
   {
     num: "01", name: "Portfolio",
-       liveLink: "https://your-portfolio.vercel.app",
+       liveLink: "https://akhilportfolio-neon.vercel.app/",
     col1img1: "/portfolio.jpeg",
     col1img2: "/portfolio1.jpeg",
     col2img: "/portfolio2.jpeg",
