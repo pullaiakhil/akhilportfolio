@@ -530,7 +530,7 @@ const PROJECTS = [
   },
   {
     num: "02", name: "NASA Asteroid Classification System",
-       liveLink: "https://your-portfolio.vercel.app",
+       liveLink: "https://nasa-aestroids-classification.vercel.app/",
     col1img1: "/nasa.jpg",
     col1img2: "/nasa1.jpg",
     col2img: "/nasa2.jpg",
